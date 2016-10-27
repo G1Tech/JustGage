@@ -15,22 +15,20 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-      <div class="wrapper clear">
+ 
           <div id="g1" class="gauge"></div>
-          <div id="g2" class="gauge"></div>
-      </div>
-
+ 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+    
         <script src="{{ url_for('static', filename='raphael.2.1.0.min.js') }}"></script>
         <script src="{{ url_for('static', filename='justgage.1.0.1.min.js') }}"></script>
 
         <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-            var g1;
-
+         
             var g1 = new JustGage({
                 id: "g1",
                 value: {{cpu_temp}},
